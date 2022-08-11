@@ -32,6 +32,12 @@ function seleccionarMascota () {
     let seccionSeleccionarMascota = document.getElementById('elegir-mascota')
     seccionSeleccionarMascota.style.display = 'none'
 
+    let seccionBotonMascota = document.getElementById('boton-seleccionar')
+    seccionBotonMascota.style.display = 'none'
+
+    let seccionTituloSeleccion = document.getElementById('titulo-seleccion')
+    seccionTituloSeleccion.style.display = 'none'
+
     let inputHipodoge = document.getElementById('hipodoge')
     let inputCapipepo = document.getElementById('capipepo')
     let inputRatugueya = document.getElementById('ratigueya')
