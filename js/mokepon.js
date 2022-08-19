@@ -126,12 +126,27 @@ function revisarVidas () {
 }
 
 function crearMensaje () {
-    let seccionMensajes =  document.getElementById('mensajes')
+    /*let seccionMensajes =  document.getElementById('mensajes')*/
+    let sectionMS = document.getElementById('resultado')
+    let ataqueJugador = document.getElementById('ataqueJugador')
+    let ataqueEnemigoMS = document.getElementById('ataqueEnemigo')
 
-    let parrafo = document.createElement('p')
+    /*let notifResultado = document.createElement('p')*/
+    let notifJugador = document.createElement('p')
+    let notifEnemigo = document.createElement('p')
+
+    sectionMS.innerHTML = resultado
+    notifEnemigo.innerHTML = ataqueEnemigo
+    notifJugador.innerHTML = botonAtaque
+
+    /*sectionMS.appendChild(notifResultado)*/
+    ataqueJugador.appendChild(notifJugador)
+    ataqueEnemigoMS.appendChild(notifEnemigo)
+
+    /*let parrafo = document.createElement('p')
     parrafo.innerHTML = 'Tu mascota atacó con ' + botonAtaque + ', la mascota enemiga atacó con ' + ataqueEnemigo +' ' +resultado
     
-    seccionMensajes.appendChild(parrafo)
+    seccionMensajes.appendChild(parrafo)*/
 
     let numeroVidasJugador = document.getElementById('vidas-jugador')
     numeroVidasJugador.innerHTML = vidasJugador
@@ -141,7 +156,7 @@ function crearMensaje () {
 }
 
 function mensajeResultadoFinal (resultadoFinal) {
-    let seccionMensajes = document.getElementById('mensajes')
+    let seccionMensajes = document.getElementById('resultado')
     let parrafo = document.createElement('p')
     parrafo.innerHTML = resultadoFinal
 
@@ -182,3 +197,5 @@ function seleccionarMascotaEnemigo() {
 }
 
 window.addEventListener('load', iniciarJuego)   
+
+
